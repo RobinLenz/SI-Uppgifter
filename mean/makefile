@@ -27,13 +27,13 @@ $(BUILD):
 ifeq ($(OS), Windows_NT)
 	-@ if NOT EXIST $(BUILD) mkdir $(BUILD)
 else
-	if [! -d $(BUILD)]; then mkdir $(BUILD)
+	if [ ! -d $(BUILD) ]; then mkdir $(BUILD); fi
 endif
 $(BIN):
 ifeq ($(OS), Windows_NT)
 	-@ if NOT EXIST $(BIN) mkdir $(BIN)
 else
-	if [! -d $(BIN)]; then mkdir $(BIN)
+	if [ ! -d $(BIN) ]; then mkdir $(BIN); fi
 endif
 
 
