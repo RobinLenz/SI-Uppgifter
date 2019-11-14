@@ -11,9 +11,14 @@ class ArrayClass
         ArrayClass();                                   //Constructor
         ~ArrayClass();                                  //Destructor (Does not need to be implemented)
 
+        bool operator < (ArrayClass other);             //Less than operator. An ArrayClass object is defined to be less than another one if the avarage value of all elements in the array is samller than in the other array
+        //If there is time, also implement <=, >, >= and == following the same definition as above.
+
         int getSize();                                  //Returns the number of elements currently in the array
         int getFree();                                  //Returns the number of remaining spots in the array
-
+        void printArray();                              //Prints the array
+        int getSum();                                   //Returns the sum of all elements in the array
+        
         bool addElement(int newElement);                //Adds a new number to the array
         void removeElement(int value);                  //Removes all elements that match value
         void removeAt(int index);                       //Removes the element at the given index
@@ -21,8 +26,7 @@ class ArrayClass
         bool merge(ArrayClass other);                   //Merge with another ArrayClass object by adding the value of each element in other to the corresponding element in the original array. Returns false if the current capacity is too low
         bool concatenate(ArrayClass other);             //Add all elements in other to the end of the original array. Returns false if the current capacity is too low
 
-        void printArray();                              //Prints the array
-        int getSum();                                   //Returns the sum of all elements in the array
+        
 
         void testFunc();                                //Test function to check if compilation and linking works as expected. Feel free to remove this once you have made sure it all works
 };
